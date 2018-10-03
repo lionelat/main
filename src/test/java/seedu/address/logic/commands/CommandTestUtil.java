@@ -40,7 +40,8 @@ public class CommandTestUtil {
             + "ps4-090-hori-real-arcade-prov-silent-hayabusaps4ps3-ps4-090-i223784443-s340908954.html";
     public static final String VALID_TAG_HUSBAND = "husband";
     public static final String VALID_TAG_FRIEND = "friend";
-    public static final String VALID_SAVED_AMOUNT = "-11.11";
+    public static final String VALID_SAVED_AMOUNT_AMY = "11.11";
+    public static final String VALID_SAVED_AMOUNT_BOB = "12.12";
     public static final Remark SAMPLE_REMARK_1 = new Remark("test remark");
     public static final Remark SAMPLE_REMARK_1B = new Remark("test remark");
     public static final Remark SAMPLE_REMARK_2 = new Remark("test remark 2");

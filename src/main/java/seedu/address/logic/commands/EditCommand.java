@@ -6,7 +6,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PRICE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_URL;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_WISHES;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -87,7 +87,7 @@ public class EditCommand extends Command {
         }
 
         model.updateWish(wishToEdit, editedWish);
-        model.updateFilteredWishList(PREDICATE_SHOW_ALL_PERSONS);
+        model.updateFilteredWishList(PREDICATE_SHOW_ALL_WISHES);
         model.commitWishBook();
         return new CommandResult(String.format(MESSAGE_EDIT_WISH_SUCCESS, editedWish));
     }
@@ -103,7 +103,7 @@ public class EditCommand extends Command {
         Price updatedPrice = editWishDescriptor.getPrice().orElse(wishToEdit.getPrice());
         Email updatedEmail = editWishDescriptor.getEmail().orElse(wishToEdit.getEmail());
         Url updatedUrl = editWishDescriptor.getUrl().orElse(wishToEdit.getUrl());
-        SavedAmount savedAmount = wishToEdit.getSavedAmount();
+        SavedAmount savedAmount = wishToEdit.getSavedAmount(); // edit command does not allow editing remarks
         Remark remark = wishToEdit.getRemark(); // cannot modify remark with edit command
         Set<Tag> updatedTags = editWishDescriptor.getTags().orElse(wishToEdit.getTags());
 

@@ -24,7 +24,7 @@ import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_PRICE_AMY;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_WISHES;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_WISH;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_WISH;
 import static seedu.address.testutil.TypicalWishes.AMY;
@@ -235,7 +235,7 @@ public class EditCommandSystemTest extends WishBookSystemTest {
             Index expectedSelectedCardIndex) {
         Model expectedModel = getModel();
         expectedModel.updateWish(expectedModel.getFilteredWishList().get(toEdit.getZeroBased()), editedWish);
-        expectedModel.updateFilteredWishList(PREDICATE_SHOW_ALL_PERSONS);
+        expectedModel.updateFilteredWishList(PREDICATE_SHOW_ALL_WISHES);
 
         assertCommandSuccess(command, expectedModel,
                 String.format(EditCommand.MESSAGE_EDIT_WISH_SUCCESS, editedWish), expectedSelectedCardIndex);
@@ -266,7 +266,7 @@ public class EditCommandSystemTest extends WishBookSystemTest {
     private void assertCommandSuccess(String command, Model expectedModel, String expectedResultMessage,
             Index expectedSelectedCardIndex) {
         executeCommand(command);
-        expectedModel.updateFilteredWishList(PREDICATE_SHOW_ALL_PERSONS);
+        expectedModel.updateFilteredWishList(PREDICATE_SHOW_ALL_WISHES);
         assertApplicationDisplaysExpected("", expectedResultMessage, expectedModel);
         assertCommandBoxShowsDefaultStyle();
         if (expectedSelectedCardIndex != null) {

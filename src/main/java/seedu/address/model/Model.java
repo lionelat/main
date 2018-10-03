@@ -10,7 +10,7 @@ import seedu.address.model.wish.Wish;
  */
 public interface Model {
     /** {@code Predicate} that always evaluate to true */
-    Predicate<Wish> PREDICATE_SHOW_ALL_PERSONS = unused -> true;
+    Predicate<Wish> PREDICATE_SHOW_ALL_WISHES = unused -> true;
 
     /** Clears existing backing model and replaces with the provided new data. */
     void resetData(ReadOnlyWishBook newData);

@@ -29,46 +29,46 @@ public class TypicalWishes {
             .withEmail("alice@example.com")
             .withPrice("94.35")
             .withTags("friends")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish BENSON = new WishBuilder().withName("Benson Meier")
             .withUrl("https://www.amazon.com/Apple-iPhone-Fully-Unlocked-32GB/dp/B0731HBTZ7")
             .withEmail("johnd@example.com")
             .withPrice("98.76")
             .withTags("owesMoney", "friends")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish CARL = new WishBuilder().withName("Carl Kurz")
             .withPrice("98.76")
             .withEmail("heinz@example.com")
             .withUrl("https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish DANIEL = new WishBuilder().withName("Daniel Meier")
             .withPrice("87.65")
             .withEmail("cornelia@example.com")
             .withUrl("https://www.amazon.com/Logitech-Mechanical-Keyboard-Romer-Switches/dp/B071VHYZ62")
             .withTags("friends")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish ELLE = new WishBuilder().withName("Elle Meyer")
             .withPrice("94.82")
             .withEmail("werner@example.com")
             .withUrl("https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish FIONA = new WishBuilder().withName("Fiona Kunz")
             .withPrice("94.82")
             .withEmail("lydia@example.com")
             .withUrl("https://www.lazada.sg/products/"
                     + "nintendo-switch-neon-console-1-year-local-warranty-best-seller-i180040203-s230048296.html")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish GEORGE = new WishBuilder().withName("George Best")
             .withPrice("94.82")
             .withEmail("anna@example.com")
             .withUrl("https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
 
     // Manually added
@@ -76,22 +76,22 @@ public class TypicalWishes {
             .withPrice("84.82")
             .withEmail("stefan@example.com")
             .withUrl("https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
     public static final Wish IDA = new WishBuilder().withName("Ida Mueller")
             .withPrice("84.82")
             .withEmail("hans@example.com")
             .withUrl("https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV")
-            .withSavedAmount("0.00")
+            .withSavedAmountIncrement("0.00")
             .build();
 
     // Manually added - Person's details found in {@code CommandTestUtil}
     public static final Wish AMY = new WishBuilder().withName(VALID_NAME_AMY).withPrice(VALID_PRICE_AMY)
             .withEmail(VALID_EMAIL_AMY).withUrl(VALID_URL_AMY).withTags(VALID_TAG_FRIEND)
-            .withSavedAmount("0.00").build();
+            .withSavedAmountIncrement("0.00").build();
     public static final Wish BOB = new WishBuilder().withName(VALID_NAME_BOB).withPrice(VALID_PRICE_BOB)
             .withEmail(VALID_EMAIL_BOB).withUrl(VALID_URL_BOB)
-            .withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND).withSavedAmount("0.00")
+            .withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND).withSavedAmountIncrement("0.00")
             .build();
 
     public static final String KEYWORD_MATCHING_MEIER = "Meier"; // A keyword that matches MEIER

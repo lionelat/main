@@ -22,7 +22,7 @@ public class RemarkCommand extends Command {
             + "by the index number used in the displayed wish list. "
             + "Existing values will be overwritten by the input values.\n"
             + "Parameters: INDEX (must be a positive integer) "
-            + "[" + PREFIX_REMARK + "NAME]\n"
+            + "[" + PREFIX_REMARK + "REMARK]\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + PREFIX_REMARK + "random remark";
 
@@ -51,7 +51,7 @@ public class RemarkCommand extends Command {
         Wish updatedRemarkWish = createUpdatedRemarkWish(wishToEdit, this.remark);
 
         model.updateWish(wishToEdit, updatedRemarkWish);
-        model.updateFilteredWishList(Model.PREDICATE_SHOW_ALL_PERSONS);
+        model.updateFilteredWishList(Model.PREDICATE_SHOW_ALL_WISHES);
         model.commitWishBook();
         return new CommandResult(String.format(MESSAGE_REMARK_ADD_SUCCESS, updatedRemarkWish));
     }

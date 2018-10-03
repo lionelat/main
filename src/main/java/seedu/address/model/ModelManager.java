@@ -97,7 +97,7 @@ public class ModelManager extends ComponentManager implements Model {
     public void addWish(Wish wish) {
         versionedWishBook.addWish(wish);
         versionedWishTransaction.addWish(wish);
-        updateFilteredWishList(PREDICATE_SHOW_ALL_PERSONS);
+        updateFilteredWishList(PREDICATE_SHOW_ALL_WISHES);
         indicateWishBookChanged();
     }
 
