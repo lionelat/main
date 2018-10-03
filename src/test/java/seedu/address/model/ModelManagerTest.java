@@ -2,7 +2,7 @@ package seedu.address.model;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_WISHES;
 import static seedu.address.testutil.TypicalWishes.ALICE;
 import static seedu.address.testutil.TypicalWishes.BENSON;
 
@@ -74,7 +74,7 @@ public class ModelManagerTest {
         assertFalse(modelManager.equals(new ModelManager(wishBook, userPrefs)));
 
         // resets modelManager to initial state for upcoming tests
-        modelManager.updateFilteredWishList(PREDICATE_SHOW_ALL_PERSONS);
+        modelManager.updateFilteredWishList(PREDICATE_SHOW_ALL_WISHES);
 
         // different userPrefs -> returns true
         UserPrefs differentUserPrefs = new UserPrefs();

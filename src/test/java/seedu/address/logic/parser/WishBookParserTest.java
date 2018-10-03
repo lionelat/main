@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
 import static seedu.address.logic.commands.CommandTestUtil.REMARK_DESC_SAMPLE_1;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_SAVED_AMOUNT_AMY;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_SAVING;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_WISH;
 
 import java.util.Arrays;
@@ -16,6 +18,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import seedu.address.commons.core.amount.Amount;
 import seedu.address.logic.commands.AddCommand;
 import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.Command;
@@ -29,6 +32,7 @@ import seedu.address.logic.commands.HistoryCommand;
 import seedu.address.logic.commands.ListCommand;
 import seedu.address.logic.commands.RedoCommand;
 import seedu.address.logic.commands.RemarkCommand;
+import seedu.address.logic.commands.SaveCommand;
 import seedu.address.logic.commands.SelectCommand;
 import seedu.address.logic.commands.UndoCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
@@ -226,6 +230,15 @@ public class WishBookParserTest {
     public void parseCommand_undoCommandAlias_returnsUndoCommand() throws Exception {
         assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);
         assertTrue(parser.parseCommand("undo 3") instanceof UndoCommand);
+    }
+
+    @Test
+    public void parseCommand_saveCommand_returnsSaveCommand() throws Exception {
+        Amount amount = new Amount(VALID_SAVED_AMOUNT_AMY);
+        SaveCommand saveCommandFromParser = (SaveCommand) parser.parseCommand(
+                SaveCommand.COMMAND_WORD + " " + INDEX_FIRST_WISH.getOneBased() + " "
+            + PREFIX_SAVING + VALID_SAVED_AMOUNT_AMY);
+        assertEquals(new SaveCommand(INDEX_FIRST_WISH, amount), saveCommandFromParser);
     }
 
     @Test

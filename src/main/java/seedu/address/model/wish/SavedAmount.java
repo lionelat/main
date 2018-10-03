@@ -3,15 +3,18 @@ package seedu.address.model.wish;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
+import seedu.address.commons.core.amount.Amount;
+
 /**
  * Represents a saved Amount for a Wish in the wish book.
  * Guarantees: immutable; is valid as declared in {@link #isValidSavedAmount(String)}
  */
 public class SavedAmount {
-
-    public static final String MESSAGE_PRICE_CONSTRAINTS =
-            "Saved Amount numbers should only contain numbers, and at most two numbers after the decimal point.";
-    public static final String SAVED_AMOUNT_VALIDATION_REGEX = "[+-]?[0-9]+([,.][0-9]{1,2})?";
+    public static final String MESSAGE_SAVED_AMOUNT_INVALID =
+            "Invalid saved amount value!";
+    public static final String MESSAGE_SAVED_AMOUNT_NEGATIVE = "Saved amount cannot be negative";
+    public static final String MESSAGE_SAVED_AMOUNT_TOO_LARGE = "Current saved amount for wish is too large!";
+    public static final String SAVED_AMOUNT_VALIDATION_REGEX = "[-+]?[0-9]+([.]{1}[0-9]{1,2})?";
     public final Double value;
 
     /**
@@ -19,10 +22,24 @@ public class SavedAmount {
      *
      * @param savedAmount A valid savedAmount number.
      */
-    public SavedAmount(String savedAmount) {
+    public SavedAmount(String savedAmount) throws IllegalArgumentException {
         requireNonNull(savedAmount);
-        checkArgument(isValidSavedAmount(savedAmount), MESSAGE_PRICE_CONSTRAINTS);
-        value = Double.parseDouble(savedAmount); // TO-DO: check before allowing.
+        checkArgument(isValidSavedAmount(savedAmount), MESSAGE_SAVED_AMOUNT_INVALID);
+        value = Double.parseDouble(savedAmount);
+        if (value.doubleValue() < 0) {
+            throw new IllegalArgumentException(MESSAGE_SAVED_AMOUNT_NEGATIVE);
+        } else if (value.doubleValue() > 1000e12) {
+            throw new IllegalArgumentException(MESSAGE_SAVED_AMOUNT_TOO_LARGE);
+        }
+    }
+
+    /**
+     * Constructs a {@code SavedAmount} from an increment {@code SavedAmount}.
+     *
+     * @param change A valid savedAmount to increment the current savedAmount with.
+     */
+    public SavedAmount incrementSavedAmount(Amount change) {
+        return new SavedAmount("" + (this.value + change.value));
     }
 
     /**
@@ -48,5 +65,4 @@ public class SavedAmount {
     public int hashCode() {
         return value.hashCode();
     }
-
 }

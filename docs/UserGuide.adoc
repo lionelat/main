@@ -193,17 +193,23 @@ Selects the 1st wish in the results of the `find` command.
 === Save money for a particular wish: `save`
 
 Channels savings for a specified wish. +
-Format: `save AMOUNT [INDEX]`
+Format: `save [INDEX] AMOUNT`
 
 ****
-* `INDEX` should be a positive integer 1, 2, 3…
-* `AMOUNT` should be a positive value to the smallest denomination of the currency.
+* `INDEX` should be a positive integer 1, 2, 3… no larger than the number of wishes
 * If no `INDEX` is specified, money will be transferred to the wish which has the closest due date.
+* If `AMOUNT` is negative, money will be removed from savings for that wish. +
+* If `AMOUNT` brings the savings value to below 0, `AMOUNT` will not be accepted.
+* If wish at `INDEX` is already fulfilled, `AMOUNT` will not accepted.
 ****
 
-Examples:
-* `save 1000 1` +
-Adds $1000 into the item at index 1.
+Examples: +
+
+* `save 1 s/1000` +
+Attempt to save $1000 for the wish at index 1.
+
+* `save 1 s/-100.50` +
+ Attempt to remove $100.50 from the savings for the wish at index 1.
 
 === Editing a remark for a wish : `remark`
 
