@@ -18,7 +18,7 @@ By: `Team SE-EDU`      Since: `Jun 2016`      Licence: `MIT`
 
 == Introduction
 **WishBook** (WB) is a piggy bank in a digital app form, made for people who need a user-friendly solution for keeping
- track of their disposable income. Not only does WB keep records of your savings, it also allows users to set items
+ track of their disposable income. Not only does WB keep records of your savings, it also allows you to set items
   as goals for users to work towards, serving as a way to cultivate the habit of saving. WB is made for people who have
    material wants in life, but are uncertain of purchasing said wants, by helping them to reserve disposable income so
     that they know they can spend on their wants. So what are you waiting for? Go to Section 2, <<Quick Start>> and
@@ -203,9 +203,10 @@ Returns any wish whose name contains _watch_, and whose tags contains _broke wis
 Returns any wish whose name contains _wat_ or _balloon_, and whose tags contains
 _important_.
 // end::find[]
+
 === Delete a wish : `delete`
 
-Deletes the specified wish from the list. +
+Deletes the specified wish from the list and moves any funds in that wish to `unusedFunds`. +
 Format: `delete INDEX`
 
 ****

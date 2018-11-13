@@ -61,7 +61,12 @@ public class WishDetailSavingHistory extends UiPart<Region> {
             double prevAmount = prevWish.getSavedAmount().value;
             double nextAmount = entry.next().getSavedAmount().value;
             double diff = nextAmount - prevAmount;
-            savingHistoryList.add("Saved $" + String.format("%.2f", diff));
+
+            if (diff > 0) {
+                savingHistoryList.add("Saved $" + String.format("%.2f", diff));
+            } else if (diff < 0) {
+                savingHistoryList.add("Deducted $" + String.format("%.2f", Math.abs(diff)));
+            }
         }
 
         Collections.reverse(savingHistoryList);

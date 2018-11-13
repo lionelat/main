@@ -10,10 +10,15 @@
 == Overview
 
 WishBook (WB) is a piggy bank in a digital app form, made for people who need a user-friendly solution for keeping track
-of their disposable income. Not only does WB keep records of your savings, it also allows users to set items as goals
+of their disposable income. Not only does WB keep records of savings, it also allows users to set items as goals
 for users to work towards, serving as a way to cultivate the habit of saving. WB is made for people who have material
 wants in life, but are uncertain of purchasing said wants, by helping them to reserve disposable income so that they
-know they can spend on their wants.
+know they can spend on their wants. The user interacts with it by using a Command Line Interface (CLI), and it has a
+GUI created with JavaFX. It is written in Java, and has about 15 kLoC.
+
+WishBook is an application adapted from addressbook-level4, the original application developed by the se-edu team.
+
+The source code of addressbook-level4 can be found https://github.com/nus-cs2103-AY1819S1/addressbook-level4[here].
 
 This project portfolio consists of the contributions I have made to WishBook over the semester. +
 
@@ -30,8 +35,8 @@ less commands to remember.
 Hence it is naturally my most time consuming contribution. Significant effort was also expended in modifying the tests
 to test this new feature.
 
-* *Minor enhancement*: Added *the ability to find wishes by name, tag and remark.*
-** What it does: Allows a user to find a wish by its name, tag and remark with varying level of inclusiveness.
+* *Minor enhancement*: Added *the ability to find wishes by name, tag and/or remark with specified level
+of match with keywords.*
 ** Justification: The flexible design of this command allows user to specify varying number of arguments to the wish
 which gives the user multiple ways to find a wish or a group of wishes for ease of access.
 ** Highlights: It required an in-depth analysis of design alternatives. The implementation too was challenging as
@@ -52,7 +57,7 @@ cannot be changed upon addition of a wish.
 * *Minor enhancement*: Added a remark command.
 ** Credits: Code was adapted from https://github.com/se-edu/addressbook-level4/pull/599.
 
-* *Code contributed*: [https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&search=dioptrique&sort=displayName&since=2018-09-12&until=&timeframe=day&reverse=false&repoSort=true[Functional code]]
+* *Code contributed*: [https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&search=dioptrique&sort=displayName&since=2018-09-12&until=&timeframe=day&reverse=false&repoSort=true[Project Code Dashboard link]]
 
 * *Other contributions*:
 
@@ -62,8 +67,7 @@ cannot be changed upon addition of a wish.
 *** Did structural changes to User Guide: https://github.com/CS2103-AY1819S1-T16-1/main/pull/67[#67],
 https://github.com/CS2103-AY1819S1-T16-1/main/pull/136[#136]
 ** Community:
-*** PRs reviewed (with non-trivial review comments): https://github.com/CS2103-AY1819S1-T16-1/main/pull/4[#4]
-*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com/CS2103-AY1819S1-T16-1/main/issues/71[#71],
+*** Reported bugs and suggestions for group members (examples:  https://github.com/CS2103-AY1819S1-T16-1/main/issues/71[#71],
                                                                https://github.com/CS2103-AY1819S1-T16-1/main/issues/20[#20],
                                                                https://github.com/CS2103-AY1819S1-T16-1/main/issues/127[#127],
                                                                https://github.com/CS2103-AY1819S1-T16-1/main/issues/130[#130],
@@ -71,6 +75,10 @@ https://github.com/CS2103-AY1819S1-T16-1/main/pull/136[#136]
                                                                 https://github.com/CS2103-AY1819S1-T16-1/main/issues/70[#6],
                                                                 https://github.com/CS2103-AY1819S1-T16-1/main/issues/85[#7],
                                                                 https://github.com/CS2103-AY1819S1-T16-1/main/issues/72[#8])
+*** Reported bugs and suggestions for other teams (examples: https://github.com/CS2103-AY1819S1-F11-3/main/issues/197[#197],
+                                                             https://github.com/CS2103-AY1819S1-F11-3/main/issues/194[#194],
+                                                             https://github.com/CS2103-AY1819S1-F11-3/main/issues/189[#189],
+                                                             https://github.com/CS2103-AY1819S1-F11-3/main/issues/186[#186])
 
 == Contributions to the User Guide
 

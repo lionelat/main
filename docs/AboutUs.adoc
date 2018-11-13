@@ -13,7 +13,7 @@ The source code can be found https://github.com/nus-cs2103-AY1819S1/addressbook-
 
 == Project Team
 
-=== Dominic Chong
+=== Chong Jun Hong, Dominic
 image::bannified.png[width="150", align="left"]
 {empty} [https://github.com/bannified[github]] [<<bannified#, portfolio>>]
 
@@ -31,16 +31,16 @@ Responsibilities: Code Quality, In charge of Storage
 
 '''
 
-=== Ananda Kumar
+=== T Ananda Kumar
 image::dioptrique.png[width="150", align="left"]
 {empty}[http://github.com/dioptrique[github]] [<<dioptrique#, portfolio>>]
 
 Role: Developer +
-Responsibilities: Testing, Integration, IntelliJ Expert
+Responsibilities: Testing, Integration
 
 '''
 
-=== Lionel Tan
+=== Lionel Tan Junzer
 image::lionelat.png[width="150", align="left"]
 {empty}[http://github.com/lionelat[github]] [<<lionelat#, portfolio>>]
 
@@ -49,7 +49,7 @@ Responsibilities: Documentation, In charge of Logic, Deliverables and Deadlines
 
 '''
 
-=== Lim Jiho
+=== Lim Ji Ho
 image::jiholim.png[width="150", align="left"]
 {empty}[https://mobbin.design/[homepage]] [http://github.com/jiholim[github]] [<<jiholim_ppp#, portfolio>>]
 
